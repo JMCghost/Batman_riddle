@@ -1,0 +1,70 @@
+print ""
+print "Riddle me this Batman. If you aim to give us a shot, we'll riddle you!"
+print ""
+
+#Setting up riddler function with parameters to execut(call) at the end of program
+def riddler(answer1, answer2, answer3):
+
+    #Dfining wrong_statement
+    wrong_statement = "You've got to kidding me..."
+    
+    #Setting up loop
+    #Using "while True" loop to control the loop of code inside the loop
+    while True:
+
+        guess = raw_input("What are we? ").lower()
+
+        if guess == answer1:
+            print "Answer: " + guess #Cancating varaible "guess" to end of string
+            print ""
+            print "Now I Riddle YOU!"
+            print ""
+            print "Game Over..."
+            break
+
+        if guess == answer2:
+            print "Answer: " + guess 
+            print ""
+            print "What did I say to make you think that?!?!"
+            print ""
+            print ""
+            #Instead of using print "" to have a new line you could use "print "Answer: " + guess '/n' operator to enter a new line
+
+        if guess == answer3:
+            print "Answer: " + guess
+            print ""
+            print "*facepalm*"
+            print ""
+            print ""
+
+        else:
+            #Executing Incorrect Function
+            incorrect(guess, wrong_statement)
+
+
+#Defined Incorrect function to excute when user types
+#in false data into "guess"
+#Defined "guess" and "wrong_statement" because if you didn't we can not reuse
+#The code above
+def incorrect(guess, wrong_statement):
+    
+        if guess == 'bullets' 'helicopters' 'cut oats':
+
+            #Saying the statement is true
+            return True
+        
+        #Wrote this line to fix bug, and it was a easy fix
+        if guess == 'helicopters':
+
+            return True
+
+        else:
+        
+            print wrong_statement
+
+
+#Calling our main fuction to along with parameters to execute
+riddler('bullets', 'helicopters', 'cut oats')
+
+
+#Written by Jack and Tyler
